@@ -10,52 +10,31 @@
     <title>CRUD Completo</title>
 </head>
 <body class="container py-5">
-        <h1 class="d-inline-flex">Tabla de alumnos</h1>
-        <button class="btn btn-primary float-end">
+    <header>
+        <h1 class="d-inline">Tabla de alumnos</h1>
+        <button class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#addStudent">
             <i class="fa fa-plus me-2 align-middle"></i>
             <span>Agregar alumno</span>
         </button>
-        <div class="form-group mb-4">
-            <input type="text" class="form-control" id="search-bar" placeholder="Escriba para buscar">
-        </div>
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">Edad</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Escuela</th>
-                        <th scope="col">Editar</th>
-                        <th scope="col">Borrar</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                </tbody>
-            </table>
-        </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    </header>
+
+    <div class="form-group my-4">
+        <input class="form-control" id="search-bar" placeholder="Escriba para buscar">
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead><tr id="headerRow">
+                <!--getStudents.js-->
+            </tr></thead>
+            <tbody id="tableBody">
+                <!--getStudents.js-->
+            </tbody>
+        </table>
+    </div>
 </body>
-<script src="./JavaScript/getStudents.js"></script>
-<script>
-    let searchBar = document.getElementById("search-bar");
-    let tableRows = document.getElementsByClassName("student-row");
-    function handleKeyPress() {
-        const searchBarText = searchBar.value;
-
-        for (const row of tableRows) {
-            let fullName = row.children[1].innerText + " " + row.children[2].innerText;
-
-            if (!fullName.toLowerCase().includes(searchBarText.toLowerCase())) {
-                row.style.display = "none";
-            } else {
-                row.style.display = "";
-            }
-        }
-    }
-    searchBar.addEventListener("keyup", handleKeyPress, false)
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script type="module" src="./JavaScript/index.js"></script>
 </html>
+<!--Modals-->
+<?php include_once "./PHP/Views/modals.php"; ?>
