@@ -16,11 +16,14 @@ const addNewStudent = () => {
         cache: false,
         success: () => {
             appendStudentToTable(newStudent);
+            $("#studentName").val("");
+            $("#studentSurname").val("");
+            $("#studentAge").val("");
+            $("#studentEmail").val("");
+            $("#studentSchool").val("");
             $("#addStudent").modal("hide");
         }
     });
 };
 
-$(document).ready(() => {
-    $("#addStudentButton").on("click", addNewStudent);
-});
+$(document).on("click", "button#addStudentButton", addNewStudent);

@@ -14,5 +14,5 @@ $(document).ready(() => {
                 appendStudentToTable(student);
             });
         }
-    })
+    });
 });

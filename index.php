@@ -1,4 +1,4 @@
-<!--TODO: implement AJAX-->
+<!--TODO: create a custom header-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@
     </header>
 
     <div class="form-group my-4">
-        <input class="form-control" id="search-bar" placeholder="Escriba para buscar">
+        <input class="form-control" id="search-bar" placeholder="Buscar alumnos">
     </div>
 
     <div class="table-responsive">

@@ -1,0 +1,18 @@
+let idToDelete = 0;
+$(document).on("click", "button.deleteButton", function() {
+    idToDelete = $(this).data("id");
+});
+$(document).on("click", "button#deleteStudentButton", () => {
+    $.ajax({
+        url: "/crud_completo/PHP/Connection/deleteStudent.php",
+        type: "POST",
+        dataType: "json",
+        data: { ID: idToDelete },
+        cache: false,
+        success: () => {
+            $("#deleteStudent").modal("hide");
+            $(`#${idToDelete}`).remove();
+        }
+    });
+});
+
