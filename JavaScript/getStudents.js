@@ -6,7 +6,7 @@ $(document).ready(() => {
         type: "GET",
         dataType: "json",
         success: (data) => {
-            const columns = ["NOMBRE", "APELLIDO", "EDAD", "EMAIL", "ESCUELA", "EDITAR", "BORRAR"];
+            const columns = ["NOMBRE", "APELLIDO", "EDAD", "EMAIL", "ESCUELA", "EDITAR", "ELIMINAR"];
             columns.forEach((column) => {
                 $("#headerRow").append(`<th scope='col'>${column}</th>`);
             });

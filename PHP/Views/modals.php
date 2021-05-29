@@ -81,7 +81,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <p>Esta seguro que desea eliminar este alumno?</p> 
+                <p id="deleteMessage"></p> 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

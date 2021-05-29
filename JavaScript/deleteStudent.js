@@ -1,6 +1,8 @@
 let idToDelete = 0;
 $(document).on("click", "button.deleteButton", function() {
     idToDelete = $(this).data("id");
+    const nombre = $(this).data("nombre");
+    $("#deleteMessage").text(`Esta seguro que desea eliminar a ${nombre}?`);
 });
 $(document).on("click", "button#deleteStudentButton", () => {
     $.ajax({

@@ -9,13 +9,13 @@ export function appendStudentToTable(student) {
         <td>
             <button data-id="${student.ID}" data-nombre="${student.nombre}" data-apellido="${student.apellido}"
                 data-edad="${student.edad}" data-email="${student.email}" data-escuela="${student.escuela}"
-                class="btn align-middle editButton"
+                class="btn align-middle editButton btn-outline-dark"
                 data-bs-toggle="modal" data-bs-target="#editStudent">
                 <i class="fa fa-pencil-square-o"></i>
             </button>
         </td>
         <td>
-            <button data-id="${student.ID}" class="btn align-middle deleteButton"
+            <button data-id="${student.ID}" data-nombre="${student.nombre}" class="btn btn-outline-danger align-middle deleteButton"
                 data-bs-toggle="modal" data-bs-target="#deleteStudent">
                 <i class="fa fa-trash-o"></i>
             </button>
