@@ -22,6 +22,9 @@ const addNewStudent = () => {
             $("#studentEmail").val("");
             $("#studentSchool").val("");
             $("#addStudent").modal("hide");
+        },
+        error: (xhr, status, text) => {
+            alert("Ocurrio un error inseperado al intentar agregar un alumno.\r\n" + text + `(${xhr})`);
         }
     });
 };

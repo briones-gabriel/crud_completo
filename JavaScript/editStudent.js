@@ -32,6 +32,9 @@ $(document).on("show.bs.modal", "#editStudent", function(event) {
             success: () => {
                 $("#editStudent").modal("hide");
                 location.reload();
+            },
+            error: (xhr, status, text) => {
+                alert("Ocurrio un error inseperado al intentar editar un alumno.\r\n" + text + `(${xhr})`);
             }
         });
     });

@@ -13,6 +13,11 @@ $(document).ready(() => {
             data.forEach((student) => {
                 appendStudentToTable(student);
             });
-        }
+        },
+        error: (xhr, status, text) => document.write(`
+            <h4>Ocurrio un error inesperado al intentar obtener la lista de alumnos. \
+            Por favor, intente recargar la pagina haciendo click <a href=".">aqui</a>.</h4>
+            <p style="color: red">Mensaje de error "${text} (${status})"</p>`
+        ),
     });
 });

@@ -14,6 +14,9 @@ $(document).on("click", "button#deleteStudentButton", () => {
         success: () => {
             $("#deleteStudent").modal("hide");
             $(`#${idToDelete}`).remove();
+        },
+        error: (xhr, status, text) => {
+            alert("Ocurrio un error inseperado al intentar eliminar un alumno.\r\n" + text + `(${xhr})`);
         }
     });
 });
