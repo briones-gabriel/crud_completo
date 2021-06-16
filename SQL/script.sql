@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS briones_crud_completo;
-USE briones_crud_completo;
+CREATE DATABASE IF NOT EXISTS briones;
+USE briones;
 
 CREATE TABLE IF NOT EXISTS alumnos (
     ID INT NOT NULL AUTO_INCREMENT,

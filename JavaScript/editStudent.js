@@ -17,7 +17,7 @@ $(document).on("show.bs.modal", "#editStudent", function(event) {
     $("#editStudentButton").on("click", function() {
         console.log("hello");
         $.ajax({
-            url: "/crud_completo/PHP/Connection/editStudent.php",
+            url: document.location.pathname + "PHP/Connection/editStudent.php",
             type: "POST",
             dataType: "json",
             data: {

@@ -6,7 +6,7 @@ $(document).on("click", "button.deleteButton", function() {
 });
 $(document).on("click", "button#deleteStudentButton", () => {
     $.ajax({
-        url: "/crud_completo/PHP/Connection/deleteStudent.php",
+        url: document.location.pathname + "PHP/Connection/deleteStudent.php",
         type: "POST",
         dataType: "json",
         data: { ID: idToDelete },

@@ -9,7 +9,7 @@ const addNewStudent = () => {
         escuela: $("#studentSchool").val()
     };
     $.ajax({
-        url: "/crud_completo/PHP/Connection/addStudent.php",
+        url: document.location.pathname + "PHP/Connection/addStudent.php",
         type: "POST",
         dataType: "json",
         data: newStudent,

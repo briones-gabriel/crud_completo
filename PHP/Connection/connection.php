@@ -5,7 +5,7 @@ try {
     $passwd = "";
 
     // Conexion PDO con la BDD (MySQL).
-    $pdo = new PDO("mysql:host=localhost;dbname=briones_crud_completo", $username, $passwd);
+    $pdo = new PDO("mysql:host=localhost;dbname=briones", $username, $passwd);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     // Caso de error, se muestra un mensaje destacando lo ocurrido.

@@ -2,7 +2,7 @@ import { appendStudentToTable } from "./appendStudent.js";
 
 $(document).ready(() => {
     $.ajax({
-        url: "/crud_completo/PHP/Connection/getStudents.php",
+        url: document.location.pathname + "PHP/Connection/getStudents.php",
         type: "GET",
         dataType: "json",
         success: (data) => {
